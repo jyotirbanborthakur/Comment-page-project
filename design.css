@@ -1,0 +1,46 @@
+.dark
+{
+    background-color: rgb(37, 37, 37);
+}
+.dark .navbar-brand
+{
+    color: aliceblue;
+    
+}
+.dark .card
+{
+    background-color: rgb(37, 37, 37);
+    border-color: rgb(255, 217, 0);
+
+}
+.dark .card-title
+{
+    color: aliceblue;
+}
+.dark .card-text
+{
+    color:aliceblue;
+}
+.dark .card-header
+{
+    color:aliceblue;
+}
+.dark .form-check-label
+{
+    color: aliceblue;
+}
+.dark .active
+{
+    color: aliceblue;
+}
+.dark .form-control
+{
+    background-color: rgb(59, 59, 59);
+    color: aliceblue;
+}
+.dark .textplaceholder
+{
+    color: rgb(255, 255, 255);
+}
+
+
