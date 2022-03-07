@@ -42,9 +42,13 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Add your comments</h5>
+      <form class="form-floating">
+        <input class="form-control" id="addTitle" placeholder="name@example.com">
+        <label for="addTitle" id="title">Enter your name</label>
+      </form>
         <div class="form-floating">
         <textarea class="form-control my-2" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2" class="textplaceholder">Type here!</label>
+        <label for="floatingTextarea2" class="textplaceholder">Write your comments</label>
       </div>
       <a href="#" class="btn btn-primary btn-warning" id="addBtn">POST</a>
         <button type="button" class="btn btn-danger" id="deletecom">Clear all</button>

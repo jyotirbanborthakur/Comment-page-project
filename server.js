@@ -14,8 +14,7 @@ document.getElementById('btn').addEventListener('mouseleave',function(e){
 });*/
 
 //to load the localStorage and trigger the show function when the page is opened or refreshed
-window.onload = show();
-
+show()
 function show() {
 
     let notes = localStorage.getItem("notesStore");
@@ -30,9 +29,9 @@ function show() {
         html += `  
         <div class="noteCard my-2 mx-2 card" style="width: 20rem;">
         <div class="card-body">
-            <h5 class="card-title">Comment ${index + 1}</h5>
-            <p class="card-text"> ${element}</p>
-            <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text"> ${element.text}</p>
+            <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete</button>
         </div>
     </div>`;
 
@@ -56,6 +55,7 @@ let addbtn = document.getElementById("addBtn");
 addbtn.addEventListener('click', function (e) {
 
     let addtext = document.getElementById("floatingTextarea2");
+    let addTitle = document.getElementById("addTitle");
     let notes = localStorage.getItem("notesStore");
     if (notes == null) {
         notesObj = [];
@@ -63,8 +63,14 @@ addbtn.addEventListener('click', function (e) {
     else {
         notesObj = JSON.parse(notes);
     }
-    notesObj.push(addtext.value);
+    let myObj=
+    {
+        title: addTitle.value,
+        text: addtext.value
+    }
+    notesObj.push(myObj);
     localStorage.setItem("notesStore", JSON.stringify(notesObj))
+    addTitle.value="";
     addtext.value = "";
     console.log(notes)
     show();
